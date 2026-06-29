@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export default function Input({ value, onChange, Icon, ...extraProps }) {
+export default function TextInput({ value, onChange, Icon, ...extraProps }) {
   return (
-    <InputStyled>
+    <TextInputStyled>
       {Icon && Icon}
       <input value={value} type="text" onChange={onChange} {...extraProps} />
-    </InputStyled>
+    </TextInputStyled>
   );
 }
 
-const InputStyled = styled.div`
+const TextInputStyled = styled.div`
   background-color: #fff;
   border-radius: 5px;
   display: flex;
