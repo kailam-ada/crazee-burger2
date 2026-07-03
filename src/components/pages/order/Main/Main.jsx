@@ -5,7 +5,7 @@ import Menu from "./Menu";
 export default function Main() {
   return (
     <MainStyled className="main">
-      <div className="basket">Basket</div>
+      {/* <div className="basket">Basket</div> */}
       <Menu />
     </MainStyled>
   );
@@ -19,9 +19,11 @@ const MainStyled = styled.div`
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
 
   display: grid;
-  grid-template-columns: 25% 1fr;
+  /* This code will be used later for Basket
+  grid-template-columns: 25% 1fr; */
+  grid-template-columns: 1fr;
 
-  .basket {
+  /* .basket {
     background: pink;
-  }
+  } */
 `;
