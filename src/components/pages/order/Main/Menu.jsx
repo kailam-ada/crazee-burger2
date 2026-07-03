@@ -9,13 +9,7 @@ export default function Menu() {
   return (
     <MenuStyled className="menu">
       {menu.map((produit) => {
-        return (
-          <Product
-            imageSource={produit.imageSource}
-            price={produit.price}
-            title={produit.title}
-          />
-        );
+        return <Product {...produit} />;
       })}
     </MenuStyled>
   );
@@ -29,25 +23,4 @@ const MenuStyled = styled.div`
   grid-row-gap: 60px;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-
-  .produit {
-    background: red;
-    width: 240px;
-    height: 330px;
-
-    .image {
-      border: 1px solid fuchsia;
-      width: 200px;
-      height: 145px;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .description {
-      border: 1px solid fuchsia;
-    }
-  }
 `;
