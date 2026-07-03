@@ -1,9 +1,30 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 
 export default function Menu() {
-  return <MenuStyled className="menu">Menu</MenuStyled>;
+  const [menu, setMenu] = useState(fakeMenu2);
+  return (
+    <MenuStyled className="menu">
+      {menu.map((produit) => {
+        return <div className="produit">{produit.title}</div>;
+      })}
+    </MenuStyled>
+  );
 }
 
 const MenuStyled = styled.div`
   background: purple;
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
+  padding: 50px 50px 150px;
+  display: grid;
+  grid-row-gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  .produit {
+    background: red;
+    width: 240px;
+    height: 330px;
+  }
 `;
