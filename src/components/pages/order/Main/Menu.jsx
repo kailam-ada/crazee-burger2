@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { theme } from "../../../../theme";
 import Product from "./Product";
+import { formatPrice } from "../../../../utils/maths";
 
 export default function Menu() {
   const [menu, setMenu] = useState(fakeMenu2);
@@ -14,7 +15,7 @@ export default function Menu() {
             key={id}
             title={title}
             imageSource={imageSource}
-            leftDescription={price}
+            leftDescription={formatPrice(price)}
           />
         );
       })}
