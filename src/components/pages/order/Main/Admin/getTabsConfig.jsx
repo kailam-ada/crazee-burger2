@@ -1,24 +1,20 @@
 import { AiOutlinePlus } from "react-icons/ai";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { MdModeEditOutline } from "react-icons/md";
+import AddForm from "./AdminPanel/AddForm";
+import EditForm from "./AdminPanel/EditForm";
 
 export const getTabsConfig = () => [
-  // {
-  //   index: "chevronUpDown",
-  //   label: "",
-  //   Icon: isCollapsed ? <FiChevronUp /> : <FiChevronDown />,
-  //   onClick: () => setIsCollapsed(!isCollapsed),
-  //   className: isCollapsed ? "is-active" : "",
-  // },
   {
     index: "add",
     label: "Ajouter un produit",
     Icon: <AiOutlinePlus />,
+    Content: <AddForm />,
   },
   {
     index: "edit",
     label: "Modifier un produit",
     Icon: <MdModeEditOutline />,
+    Content: <EditForm />,
   },
 ];
 
