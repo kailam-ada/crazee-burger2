@@ -12,7 +12,7 @@ export default function OrderPage() {
   const [isAddSelected, setIsAddSelected] = useState(true);
   const [isEditSelected, setIsEditSelected] = useState(false);
   const [currentTabSelected, setCurrentTabSelected] = useState("add");
-  const [menu, setMenu] = useState(fakeMenu.MEDIUM);
+  const [menu, setMenu] = useState(fakeMenu.SMALL);
 
   const handleAdd = (newProduct) => {
     const menuCopy = [...menu];
@@ -24,6 +24,10 @@ export default function OrderPage() {
     const menuCopy = [...menu];
     const menuUpdated = menuCopy.filter((product) => product.id !== productId);
     setMenu(menuUpdated);
+  };
+
+  const resetMenu = () => {
+    setMenu(fakeMenu.MEDIUM);
   };
 
   const orderContextValue = {
@@ -40,6 +44,7 @@ export default function OrderPage() {
     menu,
     handleAdd,
     handleDelete,
+    resetMenu,
   };
 
   return (
