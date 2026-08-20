@@ -8,7 +8,7 @@ import OrderContext from "../../../../context/OrderContext";
 const DEFAULT_IMAGE = "/images/coming-soon.png";
 
 export default function Menu() {
-  const { menu, isAdminMode } = useContext(OrderContext);
+  const { menu, isAdminMode, handleDelete } = useContext(OrderContext);
 
   return (
     <MenuStyled className="menu">
@@ -20,6 +20,7 @@ export default function Menu() {
             imageSource={imageSource ? imageSource : DEFAULT_IMAGE}
             leftDescription={formatPrice(price)}
             hasDeleteButton={isAdminMode}
+            onDelete={() => handleDelete(id)}
           />
         );
       })}
