@@ -9,15 +9,9 @@ export default function AddForm() {
   const [imageSource, setImageSource] = useState("");
   const [price, setPrice] = useState(0);
 
-  // const newProduct = {
-  //   id: new Date().getTime(),
-  //   title: "Nouveau Produit",
-  //   imageSource: "/images/ice-cream.png",
-  //   price: 2.5,
-  // };
-
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const newProduct = {
       id: new Date().getTime(),
       title: title,
