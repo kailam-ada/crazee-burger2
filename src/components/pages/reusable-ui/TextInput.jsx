@@ -18,18 +18,14 @@ export default function TextInput({
 }
 
 const TextInputStyled = styled.div`
-  /* background-color: ${theme.colors.white}; */
   border-radius: ${theme.borderRadius.round};
   display: flex;
   align-items: center;
 
   .icon {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     font-size: ${theme.fonts.size.SM};
     margin: 0 13px 0 8px;
-    /* color: ${theme.colors.greySemiDark}; */
   }
 
   input {
@@ -48,6 +44,7 @@ const TextInputStyled = styled.div`
 const extraStyleNormal = css`
   background-color: ${theme.colors.white};
   padding: 18px 28px;
+  color: ${theme.colors.greySemiDark};
 
   input {
     color: ${theme.colors.dark};
@@ -59,12 +56,12 @@ const extraStyleNormal = css`
 `;
 
 const extraStyleMinimalist = css`
-  background-color: ${theme.colors.white};
+  background-color: ${theme.colors.background_white};
   padding: 8px 16px;
   color: ${theme.colors.greyBlue};
 
   input {
-    background: ${theme.colors.white};
+    background: ${theme.colors.background_white};
     color: ${theme.colors.dark};
 
     &:focus {
@@ -75,5 +72,5 @@ const extraStyleMinimalist = css`
 
 const extraStyle = {
   normal: extraStyleNormal,
-  minimal: extraStyleMinimalist,
+  minimalist: extraStyleMinimalist,
 };
