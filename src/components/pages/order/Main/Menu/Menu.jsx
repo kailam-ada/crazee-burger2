@@ -15,7 +15,7 @@ export default function Menu() {
 
   if (menu.length === 0) {
     if (isAdminMode === false) return <EmptyMenuClient />;
-    return <EmptyMenuAdmin onClick={resetMenu} />;
+    return <EmptyMenuAdmin onReset={resetMenu} />;
   }
 
   return (
