@@ -5,6 +5,7 @@ import Navbar from "./Navbar/Navbar";
 import { useState } from "react";
 import OrderContext from "../../../context/OrderContext";
 import { fakeMenu } from "../../../fakeData/fakeMenu";
+import { EMPTY_PRODUCT } from "./Main/Admin/AdminPanel/AddForm";
 
 export default function OrderPage() {
   const [isAdminMode, setIsAdminMode] = useState(true);
@@ -12,7 +13,8 @@ export default function OrderPage() {
   const [isAddSelected, setIsAddSelected] = useState(true);
   const [isEditSelected, setIsEditSelected] = useState(false);
   const [currentTabSelected, setCurrentTabSelected] = useState("add");
-  const [menu, setMenu] = useState(fakeMenu.SMALL);
+  const [menu, setMenu] = useState(fakeMenu.MEDIUM);
+  const [newProduct, setNewProduct] = useState(EMPTY_PRODUCT);
 
   const handleAdd = (newProduct) => {
     const menuCopy = [...menu];
@@ -45,6 +47,8 @@ export default function OrderPage() {
     handleAdd,
     handleDelete,
     resetMenu,
+    newProduct,
+    setNewProduct,
   };
 
   return (
