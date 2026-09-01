@@ -91,6 +91,7 @@ const AddFormStyled = styled.form`
     display: grid;
     grid-row-gap: 8px;
   }
+
   .submit {
     /* background: green; */
     grid-area: 4/2/5/3;
@@ -100,7 +101,8 @@ const AddFormStyled = styled.form`
     top: 3px;
 
     .submit-button {
-      width: 50%;
+      /* width: 50%; */
+      height: 100%;
     }
   }
 `;
